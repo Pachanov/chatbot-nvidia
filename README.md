@@ -1,89 +1,358 @@
-# 🟢 NvidiaChat — Chatbot Open Source na Oracle Cloud
+# 🤖 Chatbot com NVIDIA NIM + Streamlit na Oracle Cloud
 
-> *Disciplina: Produtos de GenAI · Pós-Graduação em IA Generativa Aplicada — UFPR 2026*
+![Python](https://img.shields.io/badge/Python-3.11-blue)
+![Streamlit](https://img.shields.io/badge/Streamlit-Web_App-red)
+![Oracle Cloud](https://img.shields.io/badge/Oracle-Cloud-F80000)
+![NVIDIA](https://img.shields.io/badge/NVIDIA-NIM-76B900)
+![License](https://img.shields.io/badge/License-MIT-green)
 
-## 🚀 Implantei um Chatbot com LLM Open Source na Nuvem
-
-Ao longo de três aulas da disciplina **Produtos de GenAI**, o desafio foi claro: sair do Jupyter Notebook e colocar um chatbot baseado em modelo open source **funcionando de verdade**, acessível para qualquer pessoa via navegador, rodando em infraestrutura de nuvem pública.
-
----
-
-## 🎯 Objetivo da Atividade
-
-- Um **modelo open source** via NVIDIA NIM API
-- **Python + Streamlit** como stack de desenvolvimento
-- **Oracle Cloud Infrastructure (OCI)** como plataforma de hospedagem
-- Boas práticas de segurança e gerenciamento de credenciais
+> Projeto desenvolvido para a disciplina **Produtos de GenAI** da Pós-Graduação em Inteligência Artificial Generativa Aplicada – UFPR.
 
 ---
 
-## 🖥️ Infraestrutura
+# 🚀 Aplicação Online
 
-| Recurso | Configuração |
-|---|---|
-| Shape | VM.Standard.E2.1.Micro (Always Free) |
-| vCPUs | 1 OCPU (AMD) |
-| RAM | 1 GB |
-| SO | Ubuntu 22.04 LTS |
-| IP Público | 163.176.192.253 |
+🌐 **Acesse o chatbot:**
+
+**http://163.176.192.253:8501/**
 
 ---
 
-## 🤖 Modelo: Meta Llama 3.1 8B Instruct
+# 📦 Repositório
 
-- Open source com pesos públicos
-- 8B parâmetros — ótimo custo-benefício
-- Bom desempenho em português
-- Servido via NVIDIA NIM com otimizações TensorRT-LLM
+GitHub:
 
----
-
-## 🏗️ Desenvolvimento
-
-**Arquitetura:**
-
-**Bibliotecas:** streamlit, chatlas, openai, python-dotenv
-
-**Credenciais:** NVIDIA_API_KEY carregada via python-dotenv, nunca commitada no repositório.
+**https://github.com/Pachanov/chatbot-nvidia**
 
 ---
 
-## ☁️ Implantação na Oracle Cloud
+# 📑 Índice
+
+- Introdução
+- Objetivo
+- Demonstração
+- Infraestrutura
+- Modelo Utilizado
+- Arquitetura
+- Tecnologias
+- Estrutura do Projeto
+- Instalação
+- Execução
+- Implantação na Oracle Cloud
+- Segurança
+- Desafios Encontrados
+- Lições Aprendidas
+- Melhorias Futuras
+- Autor
+
+---
+
+# 📖 Introdução
+
+A Inteligência Artificial Generativa vem transformando a maneira como desenvolvemos aplicações inteligentes. Durante a disciplina **Produtos de GenAI**, foi proposto o desenvolvimento de um chatbot utilizando um modelo Open Source disponibilizado pela NVIDIA.
+
+O objetivo principal foi criar uma aplicação web funcional utilizando **Python** e **Streamlit**, integrando um modelo de linguagem de grande porte (LLM) através da NVIDIA NIM API e publicando a aplicação em uma máquina virtual da Oracle Cloud Infrastructure (OCI).
+
+O resultado é um chatbot totalmente funcional, acessível pela internet através de um endereço IP público.
+
+---
+
+# 🎯 Objetivo
+
+Desenvolver um chatbot capaz de responder perguntas sobre Engenharia de Prompt utilizando um modelo Open Source da NVIDIA, permitindo acesso através de navegador web.
+
+A atividade contempla:
+
+- Desenvolvimento em Python;
+- Interface web com Streamlit;
+- Utilização de modelo Open Source;
+- Publicação em nuvem;
+- Gerenciamento seguro de credenciais.
+
+---
+
+# 📷 Demonstração
+
+*(Adicione aqui suas capturas de tela)*
+
+```
+images/
+├── tela1.png
+├── tela2.png
+├── demo.gif
+```
+
+Exemplo:
+
+```markdown
+![Tela Inicial](images/tela1.png)
+
+![Conversa](images/tela2.png)
+
+![Demo](images/demo.gif)
+```
+
+---
+
+# ☁️ Infraestrutura
+
+| Item                | Configuração              |
+| ------------------- | --------------------------- |
+| Cloud               | Oracle Cloud Infrastructure |
+| Sistema Operacional | Ubuntu 22.04 LTS            |
+| Shape               | VM.Standard.E2.1.Micro      |
+| CPU                 | 1 OCPU                      |
+| Memória            | 1 GB RAM                    |
+| Aplicação         | Streamlit                   |
+| Porta               | 8501                        |
+| IP Público         | 163.176.192.253             |
+
+---
+
+# 🤖 Modelo Utilizado
+
+## Meta Llama 3.3 70B Instruct
+
+Modelo disponibilizado através da plataforma **NVIDIA NIM API**.
+
+### Justificativa
+
+Foi escolhido por apresentar:
+
+- Excelente desempenho em linguagem natural;
+- Alto nível de precisão;
+- Suporte ao idioma português;
+- Modelo Open Source;
+- Fácil integração via API.
+
+### Características
+
+- 70 bilhões de parâmetros
+- Contexto estendido
+- Baixa latência
+- Compatível com OpenAI SDK
+- Servido pela NVIDIA NIM
+
+---
+
+# 🏗 Arquitetura da Aplicação
+
+```
+                Usuário
+                    │
+                    ▼
+        Interface Web (Streamlit)
+                    │
+                    ▼
+             Aplicação Python
+                    │
+                    ▼
+      NVIDIA NIM API (Llama 3.3 70B)
+                    │
+                    ▼
+          Resposta do Modelo
+                    │
+                    ▼
+                Usuário
+```
+
+---
+
+# 💻 Tecnologias Utilizadas
+
+- Python 3.11
+- Streamlit
+- NVIDIA NIM API
+- Chatlas
+- OpenAI SDK
+- python-dotenv
+- Git
+- GitHub
+- Ubuntu
+- Oracle Cloud
+
+---
+
+# 📁 Estrutura do Projeto
+
+```
+chatbot-nvidia/
+│
+├── app.py
+├── requirements.txt
+├── README.md
+├── .gitignore
+├── .env (não versionado)
+└── images/
+```
+
+---
+
+# ⚙️ Instalação
+
+Clone o repositório:
 
 ```bash
 git clone https://github.com/Pachanov/chatbot-nvidia.git
-cd chatbot_curso
-python3 -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-export NVIDIA_API_KEY="nvapi-..."
-nohup streamlit run app.py --server.port 8501 --server.address 0.0.0.0 &
+
+cd chatbot-nvidia
 ```
 
-**Principais desafios:**
-- Firewall duplo: Security List da OCI + ufw do Ubuntu
-- Streamlit requer --server.address 0.0.0.0 para acesso externo
-- Autenticação GitHub via SSH key
+Crie o ambiente virtual:
+
+```bash
+python -m venv .venv
+```
+
+Ative o ambiente:
+
+### Linux
+
+```bash
+source .venv/bin/activate
+```
+
+### Windows
+
+```powershell
+.venv\Scripts\activate
+```
+
+Instale as dependências:
+
+```bash
+pip install -r requirements.txt
+```
 
 ---
 
-## 💡 Lições Aprendidas
+# 🔑 Configuração da API
 
-- Infraestrutura tem camadas: VCN, subnet, security list e ufw precisam estar alinhados
-- O SDK OpenAI é compatível com a NVIDIA NIM API
-- Streamlit é poderoso para MVPs de IA
-- Segurança de credenciais não é opcional mesmo em projetos acadêmicos
+Crie um arquivo chamado `.env`
 
----
-
-## 🔗 Links
-
-- 🌐 **Aplicação**: http://163.176.192.253:8501
-- 📦 **GitHub**: https://github.com/Pachanov/chatbot-nvidia
-- 🤖 **NVIDIA NIM**: https://build.nvidia.com
+```env
+NVIDIA_API_KEY=sua_chave_aqui
+```
 
 ---
 
-*Desenvolvido por **Victor Hugo Pachano Maurera** — Junior MIS Data Analyst | Pós-Graduando em IA Generativa Aplicada (UFPR 2026–2027)*
+# ▶️ Execução
 
-*#GenAI #LLM #Python #Streamlit #OracleCloud #NVIDIA #OpenSource #Llama*
+Execute:
+
+```bash
+streamlit run app.py
+```
+
+Acesse:
+
+```
+http://localhost:8501
+```
+
+---
+
+# ☁️ Implantação na Oracle Cloud
+
+A aplicação foi publicada em uma máquina virtual Ubuntu hospedada na Oracle Cloud Infrastructure.
+
+Passos realizados:
+
+- Criação da VM
+- Configuração do Ubuntu
+- Instalação do Python
+- Instalação das dependências
+- Configuração da variável NVIDIA_API_KEY
+- Liberação da porta 8501
+- Configuração da Security List
+- Execução do Streamlit
+
+Execução:
+
+```bash
+nohup streamlit run app.py \
+--server.port 8501 \
+--server.address 0.0.0.0 &
+```
+
+---
+
+# 🔒 Segurança
+
+As credenciais da NVIDIA não são armazenadas no código.
+
+Foi utilizado:
+
+- arquivo `.env`
+- python-dotenv
+
+O arquivo `.env` está presente no `.gitignore`.
+
+---
+
+# ⚠️ Desafios Encontrados
+
+Durante o desenvolvimento foram encontrados alguns desafios:
+
+- Configuração da Oracle Cloud;
+- Liberação da porta 8501;
+- Configuração das Security Lists;
+- Firewall do Ubuntu (UFW);
+- Autenticação via chave SSH;
+- Publicação do Streamlit para acesso externo.
+
+---
+
+# 📚 Lições Aprendidas
+
+Este projeto proporcionou aprendizado em:
+
+- Deploy de aplicações Python
+- Oracle Cloud Infrastructure
+- Streamlit
+- Modelos Open Source
+- NVIDIA NIM API
+- Engenharia de Prompt
+- Gerenciamento seguro de credenciais
+- Git e GitHub
+
+---
+
+# 🚀 Melhorias Futuras
+
+- Histórico persistente das conversas
+- Autenticação de usuários
+- Banco de dados
+- Docker
+- HTTPS
+- Domínio personalizado
+- Deploy automatizado via GitHub Actions
+
+---
+
+# 👨‍💻 Autor
+
+**Victor Hugo Pachano Maurera**
+
+Analista de Dados | Desenvolvedor Python | Pós-Graduando em Inteligência Artificial Generativa Aplicada (UFPR)
+
+GitHub:
+
+https://github.com/Pachanov
+
+LinkedIn:
+
+https://www.linkedin.com/in/victor-hugo-pachano-maurera/
+
+---
+
+# 📄 Licença
+
+Este projeto foi desenvolvido para fins acadêmicos na disciplina **Produtos de GenAI**.
+
+Licença MIT.
+
+---
+
+## ⭐ Se este projeto foi útil, deixe uma estrela no repositório!
+
