@@ -73,8 +73,6 @@ A atividade contempla:
 
 # 📷 Demonstração
 
-*(Adicione aqui suas capturas de tela)*
-
 ```
 images/
 ├── tela1.png
@@ -355,4 +353,3 @@ Licença MIT.
 ---
 
 ## ⭐ Se este projeto foi útil, deixe uma estrela no repositório!
-
